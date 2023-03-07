@@ -24,9 +24,6 @@
     line-height: 2.5;
 
     content: "MAIS POPULAR";
-
-  
-
 }
 
 .plano__cabecalho {
@@ -151,11 +148,24 @@
 }
 
 .depoimento > blockquote {
+    position: relative;
     margin: 0;
     padding: 0 60px;
 
     text-align: center;
     font-size: 1em;
+}
+
+.depoimento > blockquote::before {
+    position: absolute;
+    left: 0;
+    top: -0.35em;
+
+    color: #ccc;
+
+    font-size: 8em;
+
+    content: "\201c";
 }
 
 .depoimento__autor {
@@ -171,4 +181,35 @@
 
 .depoimento__autor > p {
     margin-top: 10px;
+}
+
+/*-----------------------------*\
+   NAVEGACAO
+\*-----------------------------*/
+.navegacao {
+
+}
+
+.navegacao__menu {
+    float: right;
+}
+
+/*-----------------------------*\
+   BOTAO-CHAVEADOR
+\*-----------------------------*/
+.botao-chaveador {
+    width: 24px;
+    height: 24px;
+    border: 0;
+
+    background: none;
+    background-image: url(./bars.png);
+
+    outline: none;
+}
+
+@media(min-width: 992px) {
+    .botao-chaveador {
+        display: none;
+    }
 }
